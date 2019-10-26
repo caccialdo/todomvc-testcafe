@@ -1,0 +1,45 @@
+{
+  "name": "todomvc-testcafe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-scripts build && serve -s build",
+    "dev": "react-scripts start",
+    "eject": "react-scripts eject",
+    "test": "react-scripts test --env=node",
+    "e2e:local": "testcafe safari,chrome:headless,firefox:headless tests/acceptance/",
+    "e2e:browserstack": "node -r dotenv/config node_modules/.bin/testcafe 'browserstack:ie@11.0:Windows 7,browserstack:iPhone XS@13.0' tests/acceptance/",
+    "browserstack:aliases": "testcafe -b browserstack"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.0.2",
+    "redux": "^4.0.1",
+    "reselect": "^4.0.0",
+    "serve": "^11.2.0",
+    "testcafe": "^1.6.0",
+    "testcafe-browser-provider-browserstack": "^1.9.0",
+    "testcafe-react-selectors": "^3.3.0",
+    "todomvc-app-css": "^2.2.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "react-scripts": "^3.2.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
