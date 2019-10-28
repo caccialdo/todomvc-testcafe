@@ -1,5 +1,7 @@
 # Due Diligence - TestCafé
 
+To run the UI tests: `yarn start` in one session and `yarn yarn e2e:local` in another one.
+
 ## Features
 
 - Extensive browser support

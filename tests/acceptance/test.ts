@@ -1,8 +1,9 @@
+import * as ip from "ip";
 import { waitForReact } from "testcafe-react-selectors";
 import page from "./pageObject";
 
 fixture("todomvc suite")
-  .page("http://192.168.1.110:5000/")
+  .page(`http://${ip.address()}:5000/`)
   .beforeEach(async () => {
     await waitForReact();
   });
